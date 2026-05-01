@@ -1,49 +1,57 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
+import NavLink from "./Navlink";
+import { useState } from "react";
+import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
-  return (
-    <div className="border-b px-2">
-      <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
-        <div className="flex gap-2 items-center">
-          <Image
-            src={"/logo.png"}
-            alt="logo"
-            loading="eager"
-            width={30}
-            height={30}
-            className="object-cover h-auto w-auto"
-          />
-          <h3 className="font-black text-lg">pixgen.</h3>
-        </div>
+  const [isOpen, setIsOpen] = useState(false);
 
-        <ul className="flex items-center gap-5 text-sm">
-          <li>
-            <Link href={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link href={"/allPhotos"}>All Photos</Link>
-          </li>
-          <li>
-            <Link href={"/pricing"}>Pricing</Link>
-          </li>
-          <li>
-            <Link href={"/profile"}>Profile</Link>
-          </li>
+  return (
+    <div className="border-b px-2 ">
+      <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full px-3">
+        
+        {/* Logo */}
+        <h3 className="font-bold text-2xl md:text-3xl">
+          <span className="text-[#004d00]">Qurbani</span>
+          <span className="text-[#004d00]">Hat</span>
+        </h3>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-5 text-sm">
+          <li><NavLink href="/">Home</NavLink></li>
+          <li><NavLink href="/allPhotos">All Animals</NavLink></li>
+          <li><NavLink href="/profile">Profile</NavLink></li>
         </ul>
 
-        <div className="flex gap-4">
-          <ul className="flex items-center  text-sm">
-            <li>
-              <Link href={"/signup"}>SignUp</Link>
-            </li>
-            <li>
-              <Link href={"/signin"}>SignIn</Link>
-            </li>
-          </ul>
+        {/* Desktop Auth */}
+        <div className="hidden md:flex gap-4 text-sm">
+          <Link href="/signup">SignUp</Link>
+          <Link href="/signin">SignIn</Link>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)}>
+           <IoMdMenu></IoMdMenu>
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Dropdown */}
+      {isOpen && (
+        <div className="md:hidden flex flex-col gap-4 px-4 pb-4 text-sm">
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/allPhotos">All Animals</NavLink>
+          <NavLink href="/profile">Profile</NavLink>
+
+          <hr />
+
+          <Link href="/signup">SignUp</Link>
+          <Link href="/signin">SignIn</Link>
+        </div>
+      )}
     </div>
   );
 };
