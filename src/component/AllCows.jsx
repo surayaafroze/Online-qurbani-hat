@@ -6,13 +6,13 @@ const AllCows =async () => {
     next: { revalidate: 5 }
   })
   const animals =await res.json()
-  const topAnimals= animals.slice(0,6)
+  const topAnimals= animals.slice(0,4)
   console.log(topAnimals)
   return (
-    <div className='bg-[#99ff99] pb-10'>
+    <div className='bg-[#ccffcc] pb-10'>
     <div className='max-w-7xl mx-auto pt-10 '>
-      <h1 className='text-2xl'>Qurbani Hat</h1>
-    <div className='grid md:grid-cols-4 grid-cols-1 gap-7 md:px-3 px-5'>
+      <h1 className='text-2xl font-bold'>Qurbani Hat</h1>
+    <div className='grid md:grid-cols-4 grid-cols-1 gap-7 md:px-3 px-5 mt-6'>
       {topAnimals.map(cows=><AnimalsCard key={cows.id} cows={cows}>
 
       </AnimalsCard>)}
