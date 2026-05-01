@@ -6,7 +6,7 @@ import React from 'react';
 const AnimalsCard = ({cows}) => {
   const {name,type,breed,price,weight,age,location,description,image,category}=cows
   return (
-    <div className='shadow  bg-[#458b45] rounded-2xl'>
+    <div className='shadow  bg-[#458b45] rounded-2xl p-5'>
       <div className='p-5 space-y-5'>
        <div className='flex justify-center items-center relative w-full aspect-square p-10  py-8'>
          <Chip className='absolute  -top-7 px-2 bg-[#004d00] text-white'>{type}</Chip>
