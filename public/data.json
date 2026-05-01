@@ -76,31 +76,6 @@
     "description": "Heavy-weight bull with high meat yield and good health.",
     "image": "https://images.unsplash.com/photo-1593179357196-ea11a2e7c119?w=400",
     "category": "Large Animal"
-  },
-  {
-    "id": 7,
-    "name": "Murrah Buffalo",
-    "type": "Buffalo",
-    "breed": "Murrah",
-    "price": 160000,
-    "weight": 480,
-    "age": 4,
-    "location": "Mymensingh",
-    "description": "Strong buffalo suitable for Qurbani and meat production.",
-    "image": "https://images.unsplash.com/photo-1606206522711-0b957f2a3b2c?w=400",
-    "category": "Large Animal"
-  },
-  {
-    "id": 8,
-    "name": "Deshi Sheep",
-    "type": "Sheep",
-    "breed": "Local Deshi",
-    "price": 15000,
-    "weight": 25,
-    "age": 1,
-    "location": "Jessore",
-    "description": "Young healthy sheep raised naturally on grass.",
-    "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400",
-    "category": "Small Animal"
   }
+  
 ]

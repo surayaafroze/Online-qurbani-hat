@@ -2,7 +2,9 @@ import React from 'react';
 import AnimalsCard from './AnimalsCard';
 
 const AllCows =async () => {
-  const res =await fetch ('https://online-qurbani-hat.vercel.app/data.json')
+  const res =await fetch ('https://online-qurbani-hat.vercel.app/data.json', {
+    next: { revalidate: 5 }
+  })
   const animals =await res.json()
   const topAnimals= animals.slice(0,4)
   console.log(topAnimals)
