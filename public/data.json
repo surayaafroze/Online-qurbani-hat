@@ -34,20 +34,20 @@
     "weight": 22,
     "age": 2,
     "location": "Khulna",
-    "description": "Pure Black Bengal goat, known for tender and delicious meat. Ideal for Qurbani or household use.",
+    "description": "Pure Black Bengal goat, known for tender meat. Ideal for Qurbani.",
     "image": "https://images.unsplash.com/photo-1524024973431-2ad916746881?w=400",
     "category": "Small Animal"
   },
   {
     "id": 4,
-    "name": "Jamuna Pari ছাগল",
+    "name": "Jamuna Pari Goat",
     "type": "Goat",
     "breed": "Jamuna Pari",
     "price": 32000,
     "weight": 38,
     "age": 3,
     "location": "Dhaka",
-    "description": "Large Jamuna Pari goat with excellent body structure. Great milk producer and suitable for Qurbani.",
+    "description": "Large Jamuna Pari goat with strong body and good health.",
     "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400",
     "category": "Small Animal"
   },
@@ -60,8 +60,12 @@
     "weight": 35,
     "age": 2,
     "location": "Sirajganj",
-    "description": "Fat-tailed deshi sheep, well-nourished and healthy. Suitable for Qurbani and meat purposes.",
-    "image": "https://images.unsplash.com/photo-1484557985045-edf25e08da73?w=400",,
+    "description": "Fat-tailed deshi sheep, healthy and well nourished.",
+    "image": "https://images.unsplash.com/photo-1484557985045-edf25e08da73?w=400",
+    "category": "Small Animal"
+  },
+  {
+    "id": 6,
     "name": "Hariana Cross Bull",
     "type": "Cow",
     "breed": "Hariana Cross",
@@ -69,7 +73,7 @@
     "weight": 510,
     "age": 5,
     "location": "Cumilla",
-    "description": "Heavy-weight Hariana cross bull. Excellent for Qurbani with very high meat yield. Properly vaccinated.",
+    "description": "Heavy-weight bull with high meat yield and good health.",
     "image": "https://images.unsplash.com/photo-1593179357196-ea11a2e7c119?w=400",
     "category": "Large Animal"
   },
@@ -82,18 +86,21 @@
     "weight": 480,
     "age": 4,
     "location": "Mymensingh",
-    "description": "Strong Murrah buffalo suitable for Qurbani. Known for high meat yield and healthy build.",
+    "description": "Strong buffalo suitable for Qurbani and meat production.",
     "image": "https://images.unsplash.com/photo-1606206522711-0b957f2a3b2c?w=400",
     "category": "Large Animal"
   },
   {
     "id": 8,
-    "name": "Deshi Pati ভেড়া",
+    "name": "Deshi Sheep",
     "type": "Sheep",
     "breed": "Local Deshi",
     "price": 15000,
     "weight": 25,
     "age": 1,
     "location": "Jessore",
-    "description": "Young healthy deshi sheep, naturally raised on grass. Good for Qurbani or home consumption.",
+    "description": "Young healthy sheep raised naturally on grass.",
     "image": "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=400",
+    "category": "Small Animal"
+  }
+]
