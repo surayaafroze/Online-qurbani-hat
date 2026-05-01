@@ -6,7 +6,7 @@ import React from 'react';
 const AnimalsCard = ({cows}) => {
   const {name,type,breed,price,weight,age,location,description,image,category}=cows
   return (
-    <div className='shadow'>
+    <div className='shadow  bg-[#ccffcc] rounded'>
       <div className='p-5 space-y-5'>
        <div className='flex justify-center items-center relative w-full aspect-square'>
          <Image
@@ -19,7 +19,7 @@ const AnimalsCard = ({cows}) => {
         >
 
         </Image>
-        <Chip className='absolute  -top-2 bg-purple-500 text-white'>{type}</Chip>
+        <Chip className='absolute  -top-2 bg-[#004d00] text-white'>{type}</Chip>
        </div>
         <div>
           <h2 className='font-light'>{name}</h2>
@@ -34,7 +34,7 @@ const AnimalsCard = ({cows}) => {
    
      <p >{weight}</p>
    </div>
-   <Link href={`/allPhotos/${cows.id}`}><Button variant='outline' className={'w-full bg-purple-500 text-white'}>view details</Button></Link>
+   <Link href={`/allPhotos/${cows.id}`}><Button variant='outline' className={'w-full bg-[#004d00] text-white'}>view details</Button></Link>
         </div>
       </div>
     </div>

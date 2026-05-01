@@ -9,12 +9,14 @@ const AllCows =async () => {
   const topAnimals= animals.slice(0,4)
   console.log(topAnimals)
   return (
-    <div>
-    <h1 className='text-2xl'>Qurbani Hat</h1>
-    <div className='grid grid-cols-4'>
-      {animals.map(cows=><AnimalsCard key={cows.id} cows={cows}>
+    <div className='bg-[#004d00] pb-10'>
+    <div className='max-w-7xl mx-auto pt-10 '>
+      <h1 className='text-2xl'>Qurbani Hat</h1>
+    <div className='grid grid-cols-4 gap-6'>
+      {topAnimals.map(cows=><AnimalsCard key={cows.id} cows={cows}>
 
       </AnimalsCard>)}
+    </div>
     </div>
     </div>
   );

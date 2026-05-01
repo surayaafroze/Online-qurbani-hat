@@ -7,9 +7,11 @@ import ExtraSection from "@/component/ExtraSection";
 export default function Home() {
   return (
     <div>
-     <Banner></Banner>
+    <main className="">
+       <Banner></Banner>
      <AllCows></AllCows>
      <ExtraSection></ExtraSection>
+    </main>
     
     </div>
   );
