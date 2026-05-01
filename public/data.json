@@ -48,7 +48,7 @@
     "age": 3,
     "location": "Dhaka",
     "description": "Large Jamuna Pari goat with strong body and good health.",
-    "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400",
+    "image": "https://images.unsplash.com/photo-1604076150017-48b528308aa3?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Small Animal"
   },
   {
@@ -67,7 +67,7 @@
   {
     "id": 6,
     "name": "Hariana Cross Bull",
-    "type": "Cow",
+    "type": "Bull",
     "breed": "Hariana Cross",
     "price": 220000,
     "weight": 510,
