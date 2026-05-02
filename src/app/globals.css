@@ -1,2 +1,26 @@
 @import "tailwindcss";
 @import "@heroui/styles"; 
+
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 40s linear infinite;
+}
+.marquee-content:hover {
+  animation-play-state: paused;
+}

@@ -21,7 +21,7 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-5 text-sm">
           <li><NavLink href="/">Home</NavLink></li>
-          <li><NavLink href="/allPhotos">All Animals</NavLink></li>
+          <li><NavLink href="/allAnimals">All Animals</NavLink></li>
           <li><NavLink href="/profile">Profile</NavLink></li>
         </ul>
 

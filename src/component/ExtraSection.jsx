@@ -1,5 +1,28 @@
 import React from 'react';
 
+ const breeds = [
+  {
+    name: "Shahiwal",
+    desc: "Strong body and high-quality meat",
+  },
+  {
+    name: "Friesian",
+    desc: "Large size and higher weight",
+  },
+  {
+    name: "Local Deshi",
+    desc: "Adapted to local environment",
+  },
+  {
+    name: "Black Bengal Goat",
+    desc: "Very popular and tasty meat",
+  },
+  {
+    name: "Jamunapari",
+    desc: "Large size and good production",
+  },
+];
+
 const ExtraSection = () => {
   return (
     <div className=" px-4 py-12 space-y-16 bg-[#ccffcc]">
@@ -11,7 +34,7 @@ const ExtraSection = () => {
           Qurbani Tips
         </h2>
 
-        <div className="text-white shadow-md rounded-2xl p-6 space-y-4  bg-[#458b45]">
+        <div className="text-white shadow-md rounded-2xl p-6 space-y-4  bg-[#458b45] transition-all duration-700 hover:-translate-y-3 hover:shadow-xl">
           <p className='text-[20px]'>
             Choosing the right animal for Qurbani is very important. A healthy and suitable animal ensures that your Qurbani is valid and meaningful. Here are some essential tips:
           </p>
@@ -27,55 +50,42 @@ const ExtraSection = () => {
       </section>
 
       {/* 🔹 Top Breeds Section */}
-      <section>
-        <h2 className="text-3xl font-bold text-center mb-6 mt-10">
-          Top Breeds for Qurbani
-        </h2>
+    
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<section className="marquee py-10">
+  <h2 className="text-3xl font-bold text-center mb-6">
+    Top Breeds for Qurbani
+  </h2>
 
-          <div className="bg-[#458b45] text-white shadow-md rounded-2xl p-5">
-            <h3 className="text-xl font-semibold mb-2">Shahiwal</h3>
-            <p>Known for strong body structure and high-quality meat.</p>
-          </div>
+  <div className="marquee-content">
 
-          <div className="bg-[#458b45] text-white shadow-md rounded-2xl p-5">
-            <h3 className="text-xl font-semibold mb-2">Friesian</h3>
-            <p>Large in size and popular for higher weight.</p>
-          </div>
+    {/* Duplicate items twice for seamless loop */}
+    {[...breeds, ...breeds].map((item, index) => (
+      <div
+        key={index}
+        className="bg-[#458b45] text-white shadow-md rounded-2xl p-5 min-w-[300px] mx-3 transition-all duration-700 hover:-translate-y-3 hover:shadow-xl"
+      >
+        <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
+        <p>{item.desc}</p>
+      </div>
+    ))}
 
-          <div className="bg-[#458b45] text-white shadow-md rounded-2xl p-5">
-            <h3 className="text-xl font-semibold mb-2">Local Deshi</h3>
-            <p>Easily available and well-adapted to local conditions.</p>
-          </div>
-
-          <div className="bg-[#458b45] text-white shadow-md rounded-2xl p-5">
-            <h3 className="text-xl font-semibold mb-2">Black Bengal Goat</h3>
-            <p>Very popular in Bangladesh for its tender and tasty meat.</p>
-          </div>
-
-          <div className="bg-[#458b45] text-white shadow-md rounded-2xl p-5">
-            <h3 className="text-xl font-semibold mb-2">Jamunapari</h3>
-            <p>Known for larger size and good meat production.</p>
-          </div>
-
-        </div>
-      </section>
-
+  </div>
+</section>
       {/* 🔹 Why Choose Us Section */}
       <section>
         <h2 className="text-3xl font-bold text-center mb-6 mt-10">
           Why Choose QurbaniHat
         </h2>
 
-        <div className="bg-[#458b45] text-white shadow-md rounded-2xl p-6 mt-10">
-          <ul className="grid md:grid-cols-2 gap-4 list-disc pl-6">
-            <li>Trusted and verified livestock sellers</li>
-            <li>Easy and secure booking system</li>
-            <li>Detailed information for each animal</li>
-            <li>User-friendly and responsive design</li>
-            <li>Works smoothly on mobile, tablet, and desktop</li>
-            <li>Fast and hassle-free experience</li>
+        <div className="bg-[#458b45] text-black flex justify-center items-center shadow-md rounded-2xl py-10 px-4 mt-10">
+          <ul className="flex flex-wrap justify-center items-center gap-4  ">
+            <li className='p-3 py-4 bg-[#ccffcc] rounded-xl transition-all duration-700 hover:-translate-y-2 hover:shadow-xl'>Trusted and verified livestock sellers</li>
+            <li className='p-3 py-4 bg-[#ccffcc] rounded-xl transition-all duration-700 hover:-translate-y-2 hover:shadow-xl'>Easy and secure booking system</li>
+            <li className='p-3 py-4 bg-[#ccffcc] rounded-xl transition-all duration-700 hover:-translate-y-2 hover:shadow-xl'>Detailed information for each animal</li>
+            <li className='p-3 py-4 bg-[#ccffcc] rounded-xl transition-all duration-700 hover:-translate-y-2 hover:shadow-xl'>User-friendly and responsive design</li>
+            <li className='p-3 py-4 bg-[#ccffcc] rounded-xl transition-all duration-700 hover:-translate-y-2 hover:shadow-xl'>Works smoothly on mobile, tablet, and desktop</li>
+            <li className='p-3 py-4 bg-[#ccffcc] rounded-xl transition-all duration-700 hover:-translate-y-2 hover:shadow-xl'>Fast and hassle-free experience</li>
           </ul>
         </div>
       </section>
