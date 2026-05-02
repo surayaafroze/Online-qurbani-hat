@@ -36,8 +36,8 @@ const AnimalsCard = ({ cows }) => {
     <div className="text-blackfont-bold">
       ৳ {price}
     </div>
-
-    <Link href={`/allAnimals/${cows.id}`}>
+{/* `/allAnimals/${cows.id}` */}
+    <Link href='/signin'>
       <Button className="w-full mt-2 bg-[#ccffcc] text-black">
         View Details
       </Button>
