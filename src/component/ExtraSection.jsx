@@ -63,7 +63,7 @@ const ExtraSection = () => {
     {[...breeds, ...breeds].map((item, index) => (
       <div
         key={index}
-        className="bg-[#458b45] text-white shadow-md rounded-2xl p-5 min-w-[300px] mx-3 transition-all duration-700 hover:-translate-y-3 hover:shadow-xl"
+        className="bg-[#458b45] text-white shadow-md rounded-2xl p-5 min-w-75 mx-3 transition-all duration-700 hover:-translate-y-3 hover:shadow-xl"
       >
         <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
         <p>{item.desc}</p>

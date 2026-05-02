@@ -6,8 +6,8 @@ const AllCows =async () => {
     next: { revalidate: 5 }
   })
   const animals =await res.json()
-  const topAnimals= animals.slice(0,8)
-  console.log(topAnimals)
+  const topAnimals= animals.slice(0,4)
+ 
   return (
     <div className='bg-[#ccffcc] pb-10'>
     <div className='max-w-7xl mx-auto pt-10 '>
