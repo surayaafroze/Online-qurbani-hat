@@ -39,8 +39,8 @@ export default function SignUpPage() {
   };
 
   return (
-   <div className=" pt-5 pb-5">
-     <Card className="border mx-auto w-125 py-10 ">
+   <div className=" pt-5 pb-5 px-6">
+     <Card className="border mx-auto max-w-125 py-10 ">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>

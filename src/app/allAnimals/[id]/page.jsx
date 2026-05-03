@@ -10,10 +10,10 @@ const AnimalsDetails =async ({params}) => {
   const animal=animals.find(a=>a.id==id)
   console.log(animal)
   return (
-    <div className='min-h-screen  bg-[#458b45] flex justify-center items-center'>
+    <div className='min-h-screen  bg-[#458b45] flex md:flex-row flex-col justify-center items-center'>
 
-      <div className='max-w-7xl mx-auto grid grid-cols-2 justify-center items-center gap-5'>
-       <div className='flex justify-center items-center '>
+      <div className='max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 justify-center items-center gap-5'>
+       <div className='flex justify-center items-center px-6 pt-6'>
         
          <Image
          className='rounded-2xl '
@@ -28,14 +28,14 @@ const AnimalsDetails =async ({params}) => {
         </Image>
         
        </div>
-        <div>
-          <h2 className='text-5xl font-bold '>{animal.name}</h2>
+        <div  classname='px-6'>
+          <h2 className='md:text-5xl text-3xl font-bold px-6'>{animal.name}</h2>
   
     
    
-      <p className='bg-[#ccffcc] p-6 rounded-xl mt-6 text-xl'>{animal.description}</p>
+   <div className='px-4'>   <p className='bg-[#ccffcc] p-6 rounded-xl mt-6 text-xl '>{animal.description}</p></div>
       {/* category,location,age,weight,price,breed,type */}
-   <div className='flex flex-col bg-[#ccffcc] p-8 mt-10 rounded-xl space-y-3 mb-5'>
+   <div className='flex flex-col bg-[#ccffcc] p-8 mt-10 rounded-xl space-y-3 mb-5 mx-4'>
     <div className='flex justify-around items-center'>
   <p className='font-bold text-xl'>Type:</p>
   <p className='font-bold'>{animal.type}</p>
@@ -73,7 +73,7 @@ const AnimalsDetails =async ({params}) => {
   
   
    <Link href={`/allAnimals/${animal.id}`}
-   ><Button variant='outline' className={'w-full bg-[#ccffcc] text-black mt-4'}>Order Now</Button></Link>
+   ><Button variant='outline' className={'w-full bg-[#ccffcc] text-black mt-4 '}>Order Now</Button></Link>
         </div>
       </div>
 

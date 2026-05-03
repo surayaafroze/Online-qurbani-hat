@@ -73,7 +73,7 @@ await authClient.signOut();
 
           <hr />
 
-           <div className="hidden md:flex gap-4 text-sm">
+           <div className="md:hidden flex gap-4 text-sm">
           {! user && <ul className="flex justify-center items-center gap-3">
             <li><Link href="/signin">login</Link></li>
             <li><Link href="/signup">Register</Link></li>
@@ -90,7 +90,7 @@ await authClient.signOut();
         <Avatar.Image alt={user?.image} />
         <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar> */}
-      <Button  variant="danger">Logout</Button>
+      <Button onClick={handelSignOut}  variant="danger">Logout</Button>
           </div>
           }
         </div>
