@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { GrGoogle } from "react-icons/gr";
 // import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
@@ -93,6 +94,8 @@ export default function SignInPage() {
           </Button>
         </div>
       </Form>
+      <p className="text-center">or</p>
+      <div className="text-center"><Button variant="outline"><GrGoogle></GrGoogle> Continue with Google</Button></div>
     </Card>
    </div>
   );
