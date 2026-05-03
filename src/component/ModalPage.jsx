@@ -1,16 +1,22 @@
 "use client";
 
 
+import { authClient } from "@/lib/auth-client";
 import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 
 import { BiUser } from "react-icons/bi";
 import { MdUpdate } from "react-icons/md";
 
 export function ModalPage() {
-  const onSubmit=()=>{
+  const onSubmit=async(e)=>{
     e.preventDefault()
     const name=e.target.name.value
     const image=e.target.image.value
+   await authClient.updateUser({
+    name,
+    image
+    
+})
   }
   return (
     <Modal>
@@ -28,7 +34,7 @@ export function ModalPage() {
             </Modal.Header>
             <Modal.Body className="p-6">
               <Surface variant="default">
-                <form className="flex flex-col gap-4" onSubmit={onSubmit}>
+                <form onSubmit={onSubmit} className="flex flex-col gap-4" >
                   <TextField className="w-full" name="name" type="text">
                     <Label>Name</Label>
                     <Input placeholder="Enter your name" />
@@ -41,7 +47,7 @@ export function ModalPage() {
                  <Button slot="close" variant="secondary">
                 Cancel
               </Button>
-              <Button type="submit">Save</Button>
+              <Button type="submit" slot="close">Save</Button>
               </Modal.Footer>
                 </form>
               </Surface>
