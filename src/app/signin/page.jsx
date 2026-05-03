@@ -11,10 +11,10 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
-  const router = useRouter()
+  // const router = useRouter()
   const onSubmit = async (e) => {
     e.preventDefault();
     
@@ -25,9 +25,9 @@ export default function SignInPage() {
       callbackURL:'/'
     })
     console.log(data,error)
-    if(!error){
-    router.push(`/allAnimals/${cows.id}`)
-  }
+  //   if(!error){
+  //   router.push(`/allAnimals/${cows.id}`)
+  // }
   };
   
 

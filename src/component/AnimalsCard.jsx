@@ -34,7 +34,7 @@ const AnimalsCard = ({ cows }) => {
     </div>
 
     <div className="text-blackfont-bold">
-      ৳ {price}
+     <span className="font-bold"> Price:</span> {price}
     </div>
 {/* `/allAnimals/${cows.id}` */}
     <Link href='/signin'>
