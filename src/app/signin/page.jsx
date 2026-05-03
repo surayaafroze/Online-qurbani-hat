@@ -29,6 +29,12 @@ export default function SignInPage() {
   //   if(!error){
   //   router.push(`/allAnimals/${cows.id}`)
   // }
+  
+};
+const handelarSignIn = async () => {
+  await authClient.signIn.social({
+    provider: "google",
+  });
   };
   
 
@@ -95,7 +101,7 @@ export default function SignInPage() {
         </div>
       </Form>
       <p className="text-center">or</p>
-      <div className="text-center"><Button variant="outline"><GrGoogle></GrGoogle> Continue with Google</Button></div>
+      <div className="text-center"><Button onClick={handelarSignIn} variant="outline" ><GrGoogle></GrGoogle> Continue with Google</Button></div>
     </Card>
    </div>
   );

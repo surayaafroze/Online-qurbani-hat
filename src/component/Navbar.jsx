@@ -4,9 +4,15 @@ import Link from "next/link";
 import NavLink from "./Navlink";
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
+import { authClient } from "@/lib/auth-client";
+import { Avatar, Button } from "@heroui/react";
 
 const Navbar = () => {
+  const userData=authClient.useSession()
+  const user=userData.data?.user
+  console.log(user)
   const [isOpen, setIsOpen] = useState(false);
+  
 
   return (
     <div className=" px-2 bg-[#ccffcc] border-b border-[#004d00] py-2">
@@ -27,8 +33,25 @@ const Navbar = () => {
 
         {/* Desktop Auth */}
         <div className="hidden md:flex gap-4 text-sm">
-          <Link href="/signup">SignUp</Link>
-          <Link href="/signin">SignIn</Link>
+          {! user && <ul className="flex justify-center items-center gap-3">
+            <li><Link href="/signup">SignUp</Link></li>
+            <li><Link href="/signin">SignIn</Link></li>
+          </ul>}
+          {user && 
+          <div className="flex justify-center items-center gap-3">
+            <Avatar>
+        <Avatar.Image alt={user?.name} src={user?.image} 
+        referrerPolicy="no-referrer"
+        />
+        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+      </Avatar>
+            {/* <Avatar>
+        <Avatar.Image alt={user?.image} />
+        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+      </Avatar> */}
+      <Button  variant="danger">Sign OUt</Button>
+          </div>
+          }
         </div>
 
         {/* Mobile Menu Button */}
@@ -48,8 +71,12 @@ const Navbar = () => {
 
           <hr />
 
-          <Link href="/signup">SignUp</Link>
-          <Link href="/signin">SignIn</Link>
+         <div>
+          {<ul>
+            <li><Link href="/signup">SignUp</Link></li>
+            <li><Link href="/signin">SignIn</Link></li>
+          </ul>}
+         </div>
         </div>
       )}
      
