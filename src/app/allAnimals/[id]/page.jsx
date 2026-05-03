@@ -5,9 +5,7 @@ import React from 'react';
 
 const AnimalsDetails =async ({params}) => {
   const {id} = await params;
- const res =await fetch ('https://online-qurbani-hat.vercel.app/data.json', {
-    next: { revalidate: 5 }
-  })
+ const res =await fetch ('https://online-qurbani-hat.vercel.app/data.json')
   const animals =await res.json()
   const animal=animals.find(a=>a.id==id)
   console.log(animal)
