@@ -29,9 +29,11 @@ const Banner = () => {
           </p>
 
           <div className="flex justify-center items-center gap-4">
-           <Link href="/allAnimals"> <button className="btn bg-[#004d00] text-white font-bold rounded px-5 py-2">
+          <ul>
+            <li className=" bg-[#004d00] text-white font-bold rounded px-5 py-2"> <Link href="/allAnimals" > 
               Browse
-            </button></Link>
+            </Link></li>
+          </ul>
 
             
           </div>

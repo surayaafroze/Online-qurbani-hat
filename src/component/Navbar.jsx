@@ -36,7 +36,7 @@ await authClient.signOut();
         {/* Desktop Auth */}
         <div className="hidden md:flex gap-4 text-sm">
           {! user && <ul className="flex justify-center items-center gap-3">
-            <li><Link href="/signin">SignIn</Link></li>
+            <li><Link href="/signin">Login</Link></li>
             <li><Link href="/signup">Register</Link></li>
           </ul>}
           {user && 
@@ -51,7 +51,7 @@ await authClient.signOut();
         <Avatar.Image alt={user?.image} />
         <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar> */}
-      <Button onClick={handelSignOut} variant="danger">Sign OUt</Button>
+      <Button onClick={handelSignOut} variant="danger">Logout</Button>
           </div>
           }
         </div>
@@ -75,7 +75,7 @@ await authClient.signOut();
 
            <div className="hidden md:flex gap-4 text-sm">
           {! user && <ul className="flex justify-center items-center gap-3">
-            <li><Link href="/signin">SignIn</Link></li>
+            <li><Link href="/signin">login</Link></li>
             <li><Link href="/signup">Register</Link></li>
           </ul>}
           {user && 
@@ -90,7 +90,7 @@ await authClient.signOut();
         <Avatar.Image alt={user?.image} />
         <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar> */}
-      <Button  variant="danger">Sign OUt</Button>
+      <Button  variant="danger">Logout</Button>
           </div>
           }
         </div>
