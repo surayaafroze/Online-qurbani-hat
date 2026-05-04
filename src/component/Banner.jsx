@@ -1,5 +1,6 @@
+'use client'
 import Link from "next/link";
-
+import { motion } from "motion/react"
 const Banner = () => {
   return (
     <div className="bg-[#ccffcc] pt-5 ">
@@ -18,7 +19,11 @@ const Banner = () => {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
-        <div className="relative z-10 px-3 text-center space-y-6 max-w-5xl mx-auto">
+        <motion.div 
+        initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8 }}
+        className="relative z-10 px-3 text-center space-y-6 max-w-5xl mx-auto">
           <h1 className="md:text-4xl text-2xl font-bold text-white leading-snug">
             We provide a variety of healthy and well-raised Qurbani animals that
             are safe, pure, and carefully selected for sacrifice.
@@ -38,7 +43,7 @@ const Banner = () => {
 
             
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>

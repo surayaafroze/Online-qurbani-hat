@@ -1,3 +1,4 @@
+
 import { Button, Chip } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +11,9 @@ const AnimalsCard = ({ cows }) => {
     <div className="group bg-white text-black  rounded-2xl overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
 
   {/* Image */}
-  <div className="relative w-full h-56 bg-white">
+  <div
+   
+  className="relative w-full h-56 bg-white">
     <Chip className="absolute -top-1 right-3 bg-[#458b45] text-white z-10">
       {type}
     </Chip>
