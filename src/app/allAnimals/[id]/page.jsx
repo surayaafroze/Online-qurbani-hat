@@ -72,7 +72,7 @@ const AnimalsDetails =async ({params}) => {
    
    </div>
  
-  <div className='flex justify-center items-center '><DetailsLogin></DetailsLogin></div>
+  <div className='flex justify-center items-center px-4 pb-10'><DetailsLogin></DetailsLogin></div>
   
         </div>
       </div>

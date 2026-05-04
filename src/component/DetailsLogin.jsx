@@ -2,11 +2,15 @@
 
 import {Envelope} from "@gravity-ui/icons";
 import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
+import { toast } from "react-toastify";
 
 export function DetailsLogin() {
+  const orderHandeler=()=>{
+    toast.success('Order confirmed')
+  }
   return (
     <Modal>
-      <Button variant="secondary" className={'bg-[#ccffcc] text-black w-full font-bold'}>Order Now</Button>
+      <Button  variant="secondary" className={'bg-[#ccffcc] text-black w-full font-bold '}>Order Now</Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -44,7 +48,7 @@ export function DetailsLogin() {
               <Button slot="close" variant="secondary">
                 Cancel
               </Button>
-              <Button slot="close">Ok</Button>
+              <Button slot="close" onClick={orderHandeler}>Ok</Button>
             </Modal.Footer>
           </Modal.Dialog>
         </Modal.Container>
