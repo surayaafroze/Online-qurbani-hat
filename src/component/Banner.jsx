@@ -1,10 +1,15 @@
 'use client'
 import Link from "next/link";
 import { motion } from "motion/react"
+import 'animate.css';
 const Banner = () => {
   return (
     <div className="bg-[#ccffcc]  ">
-      <div className="relative mx-auto md:pt-20 pt-30 pb-20 overflow-hidden  min-h-[80vh]">
+      <motion.div 
+       initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.7 }}
+      className="relative mx-auto md:pt-20 pt-30 pb-20 overflow-hidden  min-h-[80vh]">
 
         {/* Background Image */}
         <div
@@ -19,18 +24,16 @@ const Banner = () => {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* Content */}
-        <motion.div 
-        initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.7 }}
-        className="relative z-10 px-3 text-center space-y-6 max-w-5xl mx-auto">
+        <div 
+       
+        className="relative z-10 px-3 text-center space-y-6 max-w-5xl mx-auto animate__animated animate__flash">
           <h1 className="md:text-4xl text-2xl font-bold text-white leading-snug">
             We provide a variety of healthy and well-raised Qurbani animals that
             are safe, pure, and carefully selected for sacrifice.
           </h1>
 
-          <p className="text-gray-200">
-            From small goats to large cows, choose the best animal with confidence.
+          <p className="text-gray-200 ">
+          From small goats to large cows, choose the best animal with confidence.
           </p>
 
           <div className="flex justify-center items-center gap-4">
@@ -43,9 +46,9 @@ const Banner = () => {
 
             
           </div>
-        </motion.div>
+        </div>
 
-      </div>
+      </motion.div>
     </div>
   );
 };

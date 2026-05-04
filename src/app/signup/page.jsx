@@ -113,7 +113,7 @@ export default function SignUpPage() {
         <div className="flex gap-2 justify-center items-center">
           <Button type="submit" className={'bg-[#458b45]'}>
             <Check />
-            Submit
+            Register
           </Button>
           <Button type="reset" variant="secondary" className={'bg-[#458b45] text-white'}>
             Reset

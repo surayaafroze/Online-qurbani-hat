@@ -102,7 +102,7 @@ const handelarSignIn = async () => {
         <div className="flex gap-2 justify-center items-center mt-3">
           <Button type="submit" className={'bg-[#458b45]'}>
             <Check />
-            Submit
+            Login
           </Button>
           <Button type="reset" variant="secondary" className={'bg-[#458b45] text-white'}>
             Reset
