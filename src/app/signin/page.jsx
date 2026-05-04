@@ -29,7 +29,7 @@ export default function SignInPage() {
       callbackURL:'/'
     })
     console.log(data,error)
-    if(!error){
+    if(data){
     toast.success('Login successful!')
   }
   else{toast.warning('Oops! Something went wrong. Try again')}
