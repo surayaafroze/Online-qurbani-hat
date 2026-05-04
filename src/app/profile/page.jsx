@@ -2,7 +2,7 @@
 import { ModalPage } from '@/component/ModalPage';
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Card } from '@heroui/react';
-import { redirect } from 'next/navigation';
+
 
 
 
