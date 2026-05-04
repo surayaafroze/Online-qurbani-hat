@@ -11,7 +11,7 @@ It provides an online environment where livestock can be explored with complete 
 
 ---
 
-## 🐐 Animal Exploration  
+## 🐄 Animal Exploration  
 
 The system allows the display of different types of livestock, including cows and goats, in a single interface.  
 Each animal is presented with organized and clear information, enabling proper comparison based on price and other relevant attributes.
@@ -63,18 +63,20 @@ Data handling and routing are structured in a way that ensures smooth navigation
 ---
 
 
----
+
 
 ## 📦 NPM Packages Used
 
 - Next.js
 - Tailwind CSS
 - Hero UI
-- React Loading Spinner
+- React Spinner
 - React Toastify
 - Better Auth
 - Fremer Motion (for animations)
 - Fetch API
+- MongoDB
+
 
 ---
 
