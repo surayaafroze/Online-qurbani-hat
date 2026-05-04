@@ -1,3 +1,4 @@
+
 import { DetailsLogin } from '@/component/DetailsLogin';
 import { Button } from '@heroui/react';
 import Image from 'next/image';
@@ -14,7 +15,9 @@ const AnimalsDetails =async ({params}) => {
     <div className='min-h-screen  bg-[#458b45] flex md:flex-row flex-col justify-center items-center'>
 
       <div className='max-w-7xl mx-auto grid md:grid-cols-2 grid-cols-1 justify-center items-center gap-5'>
-       <div className='flex justify-center items-center px-6 pt-6'>
+       <div
+       
+       className='flex justify-center items-center px-6 pt-6'>
         
          <Image
          className='rounded-2xl '
@@ -34,7 +37,9 @@ const AnimalsDetails =async ({params}) => {
   
     
    
-   <div className='px-4'>   <p className='bg-[#ccffcc] p-6 rounded-xl mt-6 text-xl '>{animal.description}</p></div>
+   <div 
+   
+   className='px-4'>   <p className='bg-[#ccffcc] p-6 rounded-xl mt-6 text-xl '>{animal.description}</p></div>
       {/* category,location,age,weight,price,breed,type */}
    <div className='flex flex-col bg-[#ccffcc] p-8 mt-10 rounded-xl space-y-3 mb-5 mx-4'>
     <div className='flex justify-around items-center'>

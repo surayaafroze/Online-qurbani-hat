@@ -1,6 +1,7 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
+import { motion } from "motion/react"
 import {
   Button,
   Card,
@@ -43,7 +44,11 @@ const handelarSignIn = async () => {
   
 
   return (
-   <div className=" pt-5 pb-5 px-6">
+   <motion.div 
+   initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.7 }}
+   className=" pt-5 pb-5 px-6">
      <Card className="border mx-auto max-w-120 py-10 px-7 ">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
@@ -110,6 +115,6 @@ const handelarSignIn = async () => {
        <p className='mt-4'>Dont have an account <Link href='/signup' className='text-red-500'>register</Link></p>
       </div>
     </Card>
-   </div>
+   </motion.div>
   );
 }

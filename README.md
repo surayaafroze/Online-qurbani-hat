@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🐄 QurbaniHat – Livestock Booking Platform
 
-## Getting Started
+## 🌐 Live Website
+👉 https://online-qurbani-hat.vercel.app
 
-First, run the development server:
+![Modern professional website collage](https://i.ibb.co.com/kVBBPwB3/Copilot-20260504-191128.png)
+## 🌟 Platform Overview  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The platform is developed to simplify the process of searching and booking Qurbani animals in a structured and user-friendly way.  
+It provides an online environment where livestock can be explored with complete information, reducing the need to visit physical markets.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🐐 Animal Exploration  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The system allows the display of different types of livestock, including cows and goats, in a single interface.  
+Each animal is presented with organized and clear information, enabling proper comparison based on price and other relevant attributes.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Detailed Information  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+A dedicated details page is available for each animal.  
+This section includes essential information such as breed, weight, age, location, and description, which supports informed decision-making.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📝 Booking System  
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+A structured booking form is implemented for placing requests.  
+The process requires basic user information and ensures a simple and efficient submission experience.  
+After submission, a confirmation message is displayed and the form is reset.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔐 Authentication System  
+
+User authentication is required to access booking functionality.  
+The system includes login and registration features, along with a Google-based authentication option for convenience.
+
+---
+
+## 👤 User Profile  
+
+A profile section is included to display user information such as name, email, and profile image.  
+An update feature is also available, allowing modification of profile details.
+
+---
+
+## 🎨 User Interface & Experience  
+
+The interface is designed with a focus on simplicity and responsiveness.  
+It supports multiple devices including mobile, tablet, and desktop.  
+Additional features such as notifications, loading indicators, and error handling improve the overall user experience.
+
+---
+
+## ⚙️ System Implementation  
+
+The application is developed using modern web technologies.  
+Data handling and routing are structured in a way that ensures smooth navigation and prevents errors during page reload.
+
+---
+
+
+---
+
+## 📦 NPM Packages Used
+
+- Next.js
+- Tailwind CSS
+- Hero UI
+- React Loading Spinner
+- React Toastify
+- Better Auth
+- Fremer Motion (for animations)
+- Fetch API
+
+---
+
+
+
+## 🌐 Live Website
+👉 https://online-qurbani-hat.vercel.app
+

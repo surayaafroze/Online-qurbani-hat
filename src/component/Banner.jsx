@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "motion/react"
 const Banner = () => {
   return (
-    <div className="bg-[#ccffcc] pt-5 ">
+    <div className="bg-[#ccffcc]  ">
       <div className="relative mx-auto md:pt-20 pt-30 pb-20 overflow-hidden  min-h-[80vh]">
 
         {/* Background Image */}
@@ -22,7 +22,7 @@ const Banner = () => {
         <motion.div 
         initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.8 }}
+    transition={{ duration: 0.7 }}
         className="relative z-10 px-3 text-center space-y-6 max-w-5xl mx-auto">
           <h1 className="md:text-4xl text-2xl font-bold text-white leading-snug">
             We provide a variety of healthy and well-raised Qurbani animals that
