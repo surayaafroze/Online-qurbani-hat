@@ -1,3 +1,4 @@
+import { DetailsLogin } from '@/component/DetailsLogin';
 import { Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -68,12 +69,11 @@ const AnimalsDetails =async ({params}) => {
 
 </div>
 
+   
    </div>
  
+  <div className='flex justify-center items-center '><DetailsLogin></DetailsLogin></div>
   
-  
-   <Link href={`/allAnimals/${animal.id}`}
-   ><Button variant='outline' className={'w-full bg-[#ccffcc] text-black mt-4 '}>Order Now</Button></Link>
         </div>
       </div>
 

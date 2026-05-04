@@ -30,7 +30,10 @@ export default function SignUpPage() {
     console.log(data,error)
     if(!error){
     router.push('/signin')
-    
+    if(!error){
+        toast.success('Login successful!')
+      }
+      else{toast.warning('Oops! Something went wrong. Try again')}
   }
   
   };
