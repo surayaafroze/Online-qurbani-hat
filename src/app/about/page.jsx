@@ -1,5 +1,8 @@
 import React from "react";
-
+export const metadata = {
+  title: "Qurbani Hat-About-us",
+  
+};
 const AboutSection = () => {
   return (
     <section id="about" className="bg-white py-16 px-4 md:px-10">

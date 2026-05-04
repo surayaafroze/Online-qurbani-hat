@@ -1,19 +1,11 @@
 
 import { DetailsLogin } from '@/component/DetailsLogin';
-import { Button } from '@heroui/react';
+
 import Image from 'next/image';
-import Link from 'next/link';
+
 import React from 'react';
 
-const metaDetails =async ({params}) => {
-  const {id} = await params;
- const res =await fetch ('https://online-qurbani-hat.vercel.app/data.json')
-  const animals =await res.json()
-  return{
-  title: animals.name,
-  
-};
-}
+
 
 const AnimalsDetails =async ({params}) => {
   const {id} = await params;
