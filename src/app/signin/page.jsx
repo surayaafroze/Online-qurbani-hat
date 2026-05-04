@@ -11,7 +11,9 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 // import { useRouter } from "next/navigation";
 
 export default function SignInPage() {
@@ -26,9 +28,11 @@ export default function SignInPage() {
       callbackURL:'/'
     })
     console.log(data,error)
-  //   if(!error){
-  //   router.push(`/allAnimals/${cows.id}`)
-  // }
+    if(!error){
+    toast.success('Login successful!')
+  }
+  else{toast.warning('Oops! Something went wrong. Try again')}
+  
   
 };
 const handelarSignIn = async () => {
@@ -40,10 +44,10 @@ const handelarSignIn = async () => {
 
   return (
    <div className=" pt-5 pb-5 px-6">
-     <Card className="border mx-auto max-w-125 py-10 ">
+     <Card className="border mx-auto max-w-120 py-10 px-7 ">
       <h1 className="text-center text-2xl font-bold">Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex max-w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
        
 
         <TextField
@@ -59,7 +63,7 @@ const handelarSignIn = async () => {
           }}
         >
           <Label>Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input placeholder="Enter your email" />
           <FieldError />
         </TextField>
 
@@ -90,7 +94,7 @@ const handelarSignIn = async () => {
           <FieldError />
         </TextField>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-center items-center mt-3">
           <Button type="submit" className={'bg-[#458b45]'}>
             <Check />
             Submit
@@ -100,8 +104,11 @@ const handelarSignIn = async () => {
           </Button>
         </div>
       </Form>
+      
       <p className="text-center">or</p>
-      <div className="text-center"><Button onClick={handelarSignIn} variant="outline" ><GrGoogle></GrGoogle> Continue with Google</Button></div>
+      <div className="text-center"><Button onClick={handelarSignIn} variant="outline" className={'w-full border'} ><GrGoogle></GrGoogle> Continue with Google</Button>
+       <p className='mt-4'>Dont have an account <Link href='/signup' className='text-red-500'>register</Link></p>
+      </div>
     </Card>
    </div>
   );

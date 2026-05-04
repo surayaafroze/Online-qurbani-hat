@@ -33,6 +33,7 @@ const Banner = () => {
             <li className=" bg-[#004d00] text-white font-bold rounded px-5 py-2"> <Link href="/allAnimals" > 
               Browse
             </Link></li>
+            
           </ul>
 
             

@@ -11,6 +11,7 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 
@@ -28,7 +29,8 @@ export default function SignUpPage() {
     })
     console.log(data,error)
     if(!error){
-    router.push('/')
+    router.push('/signin')
+    
   }
   
   };
@@ -40,10 +42,10 @@ export default function SignUpPage() {
 
   return (
    <div className=" pt-5 pb-5 px-6">
-     <Card className="border mx-auto max-w-125 py-10 ">
+     <Card className="border mx-auto max-w-125 py-10 px-4 ">
       <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form className="flex max-w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
           <Label>Name</Label>
           <Input placeholder="Enter your name" />
@@ -69,7 +71,7 @@ export default function SignUpPage() {
           }}
         >
           <Label>Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input placeholder="Enter your email" />
           <FieldError />
         </TextField>
 
@@ -100,7 +102,7 @@ export default function SignUpPage() {
           <FieldError />
         </TextField>
 
-        <div className="flex gap-2">
+        <div className="flex gap-2 justify-center items-center">
           <Button type="submit" className={'bg-[#458b45]'}>
             <Check />
             Submit
@@ -111,7 +113,10 @@ export default function SignUpPage() {
         </div>
       </Form>
        <p className="text-center">or</p>
-            <div className="text-center"><Button onClick={handelarSignIn} variant="outline" ><GrGoogle></GrGoogle> Continue with Google</Button></div>
+            <div className="text-center"><Button onClick={handelarSignIn} variant="outline" className={'w-full'} ><GrGoogle></GrGoogle> Continue with Google</Button>
+            <p className='mt-4'>Already have an account <Link href='/signin' className='text-red-500'>Login</Link></p>
+            </div>
+            
     </Card>
    </div>
   );

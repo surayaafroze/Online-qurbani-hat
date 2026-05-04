@@ -36,8 +36,8 @@ await authClient.signOut();
         {/* Desktop Auth */}
         <div className="hidden md:flex gap-4 text-sm">
           {! user && <ul className="flex justify-center items-center gap-3">
-            <li><Link href="/signin">Login</Link></li>
-            <li><Link href="/signup">Register</Link></li>
+            <li><NavLink href="/signin">Login</NavLink></li>
+            <li><NavLink href="/signup">Register</NavLink></li>
           </ul>}
           {user && 
           <div className="flex justify-center items-center gap-3">
@@ -75,8 +75,8 @@ await authClient.signOut();
 
            <div className="md:hidden flex gap-4 text-sm">
           {! user && <ul className="flex justify-center items-center gap-3">
-            <li><Link href="/signin">login</Link></li>
-            <li><Link href="/signup">Register</Link></li>
+            <li><NavLink href="/signin">login</NavLink></li>
+            <li><NavLink href="/signup">Register</NavLink></li>
           </ul>}
           {user && 
           <div className="flex justify-center items-center gap-3">
