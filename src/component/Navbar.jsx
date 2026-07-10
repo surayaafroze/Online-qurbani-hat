@@ -6,6 +6,7 @@ import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const userData=authClient.useSession()
@@ -64,37 +65,41 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden flex flex-col gap-4 px-4 pb-4 text-sm">
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/allAnimals">All Animals</NavLink>
-          <NavLink href="/profile">Profile</NavLink>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden overflow-hidden flex flex-col gap-4 px-4 pb-4 text-sm"
+          >
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/allAnimals">All Animals</NavLink>
+            <NavLink href="/profile">Profile</NavLink>
 
-          <hr />
+            <hr className="border-emerald-100" />
 
-           <div className="md:hidden flex gap-4 text-sm">
-          {! user && <ul className="flex justify-center items-center gap-3">
-            <li><NavLink href="/signin">Login</NavLink></li>
-            <li><NavLink href="/signup">Register</NavLink></li>
-          </ul>}
-          {user && 
-          <div className="flex justify-center items-center gap-3">
-            <Avatar>
-        <Avatar.Image alt={user?.name} src={user?.image} 
-        referrerPolicy="no-referrer"
-        />
-        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-      </Avatar>
-            {/* <Avatar>
-        <Avatar.Image alt={user?.image} />
-        <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
-      </Avatar> */}
-      <Button onClick={handleSignOut}  variant="danger">Logout</Button>
-          </div>
-          }
-        </div>
-        </div>
-      )}
+            <div className="flex gap-4 text-sm">
+              {!user && (
+                <ul className="flex justify-center items-center gap-3">
+                  <li><NavLink href="/signin">Login</NavLink></li>
+                  <li><NavLink href="/signup">Register</NavLink></li>
+                </ul>
+              )}
+              {user && (
+                <div className="flex justify-center items-center gap-3">
+                  <Avatar>
+                    <Avatar.Image alt={user?.name} src={user?.image} referrerPolicy="no-referrer" />
+                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                  </Avatar>
+                  <Button onClick={handleSignOut} variant="danger">Logout</Button>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
      
     </div>
   );
