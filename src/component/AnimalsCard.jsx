@@ -8,46 +8,43 @@ const AnimalsCard = ({ cows }) => {
   const { name, type, breed, price, weight, age, location, description, image } = cows;
 
   return (
-    <div className="group bg-white text-black  rounded-2xl overflow-hidden shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+    <div className="group bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 text-black dark:text-white rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
 
-  {/* Image */}
-  <div
-   
-  className="relative w-full h-56 bg-white">
-    <Chip className="absolute -top-1 right-3 bg-[#458b45] text-white z-10">
-      {type}
-    </Chip>
+      {/* Image */}
+      <div className="relative w-full h-52 overflow-hidden bg-gray-50 dark:bg-zinc-950">
+        <Chip className="absolute top-3 right-3 bg-[#004d00] text-white font-semibold z-10 border-none shadow-sm">
+          {type}
+        </Chip>
 
-    <Image
-      src={image}
-      alt={name}
-      fill
-      className="object-cover"
-    />
-  </div>
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover transition-transform duration-750 ease-out group-hover:scale-106"
+        />
+      </div>
 
-  {/* Content */}
-  <div className="p-4 space-y-2 text-black">
+      {/* Content */}
+      <div className="p-5 space-y-3.5">
+        <h2 className="text-lg font-bold text-gray-800 dark:text-gray-100 tracking-tight line-clamp-1">{name}</h2>
 
-    <h2 className="text-lg font-semibold">{name}</h2>
+        <div className="flex justify-between items-center text-sm">
+          <span className="text-gray-500 dark:text-gray-400 font-medium">{breed}</span>
+          <span className="bg-gray-100 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 px-2 py-0.5 rounded-md font-semibold text-xs">{weight} kg</span>
+        </div>
 
-    <div className="flex justify-between text-sm text-black/80">
-      <p>{breed}</p>
-      <p>{weight} kg</p>
+        <div className="flex items-center justify-between pt-1 border-t border-gray-100 dark:border-zinc-800/80">
+          <span className="text-xs text-gray-400 font-medium">Price</span>
+          <span className="text-[#004d00] dark:text-emerald-400 font-extrabold text-lg">৳{price}</span>
+        </div>
+
+        <Link href={`/allAnimals/${cows.id}`} className="block w-full pt-1">
+          <Button className="w-full bg-[#ccffcc] hover:bg-[#004d00] text-black hover:text-white font-semibold rounded-xl py-2.5 transition-all duration-300">
+            View Details
+          </Button>
+        </Link>
+      </div>
     </div>
-
-    <div className="text-blackfont-bold">
-     <span className="font-bold"> Price:</span> {price}
-    </div>
-{/* `/allAnimals/${cows.id}` */}
-  <Link href={`/allAnimals/${cows.id}`}>
-      <Button className="w-full mt-2 bg-[#ccffcc] text-black">
-        View Details
-      </Button>
-    </Link>
-
-  </div>
-</div>
   );
 };
 
