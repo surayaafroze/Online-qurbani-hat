@@ -10,12 +10,11 @@ import { Avatar, Button } from "@heroui/react";
 const Navbar = () => {
   const userData=authClient.useSession()
   const user=userData.data?.user
-  console.log(user)
   const [isOpen, setIsOpen] = useState(false);
   
-const handelSignOut=async()=>{
-await authClient.signOut();
-}
+  const handleSignOut=async()=>{
+    await authClient.signOut();
+  }
   return (
     <div className=" px-2 bg-[#ccffcc] border-b border-[#004d00] py-2">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full px-3">
@@ -51,7 +50,7 @@ await authClient.signOut();
         <Avatar.Image alt={user?.image} />
         <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar> */}
-      <Button onClick={handelSignOut} variant="danger">Logout</Button>
+      <Button onClick={handleSignOut} variant="danger">Logout</Button>
           </div>
           }
         </div>
@@ -75,7 +74,7 @@ await authClient.signOut();
 
            <div className="md:hidden flex gap-4 text-sm">
           {! user && <ul className="flex justify-center items-center gap-3">
-            <li><NavLink href="/signin">login</NavLink></li>
+            <li><NavLink href="/signin">Login</NavLink></li>
             <li><NavLink href="/signup">Register</NavLink></li>
           </ul>}
           {user && 
@@ -90,7 +89,7 @@ await authClient.signOut();
         <Avatar.Image alt={user?.image} />
         <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
       </Avatar> */}
-      <Button onClick={handelSignOut}  variant="danger">Logout</Button>
+      <Button onClick={handleSignOut}  variant="danger">Logout</Button>
           </div>
           }
         </div>
