@@ -2,7 +2,7 @@
 import { ModalPage } from '@/component/ModalPage';
 import { authClient } from '@/lib/auth-client';
 import { Avatar, Card } from '@heroui/react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const ProfilePage = () => {
   const userData = authClient.useSession()

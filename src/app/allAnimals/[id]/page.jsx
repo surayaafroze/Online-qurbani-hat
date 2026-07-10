@@ -3,7 +3,7 @@
 import { DetailsLogin } from '@/component/DetailsLogin';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const AnimalsDetails = ({params}) => {
   const [animal, setAnimal] = useState(null);

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { PuffLoader } from 'react-spinners';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 
 const Loading = () => {
   return (

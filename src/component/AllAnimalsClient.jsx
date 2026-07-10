@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import AnimalsCard from "@/component/AnimalsCard";
 import ButtonPage from "@/component/ButtonPage";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: { opacity: 0 },

@@ -1,7 +1,7 @@
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 import {
   Button,
   Card,
