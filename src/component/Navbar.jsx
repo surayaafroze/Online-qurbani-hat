@@ -16,17 +16,17 @@ const Navbar = () => {
     await authClient.signOut();
   }
   return (
-    <div className=" px-2 bg-[#ccffcc] border-b border-[#004d00] py-2">
+    <div className="sticky top-0 z-50 px-2 bg-[#ccffcc]/90 backdrop-blur-md border-b border-[#004d00]/20 py-2 shadow-xs transition-all duration-300">
       <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full px-3">
         
         {/* Logo */}
-        <h3 className="font-bold text-2xl md:text-3xl">
-          <span className="text-[#004d00]">Qurbani</span>
-          <span className="text-[#004d00]">Hat</span>
-        </h3>
+        <Link href="/" className="font-bold text-2xl md:text-3xl tracking-tight group flex items-center gap-1.5 transition-transform duration-200 active:scale-95">
+          <span className="text-[#004d00] group-hover:text-[#006600] transition-colors duration-200">Qurbani</span>
+          <span className="text-[#008000] bg-emerald-100 dark:bg-emerald-950 px-2 py-0.5 rounded-lg group-hover:bg-[#004d00] group-hover:text-white transition-all duration-300">Hat</span>
+        </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-5 text-sm">
+        <ul className="hidden md:flex items-center gap-6 text-sm">
           <li><NavLink href="/">Home</NavLink></li>
           <li><NavLink href="/allAnimals">All Animals</NavLink></li>
           <li><NavLink href="/profile">Profile</NavLink></li>
