@@ -35,7 +35,7 @@ const AnimalsCard = ({ cows }) => {
 
         <div className="flex items-center justify-between pt-1 border-t border-gray-100 dark:border-zinc-800/80">
           <span className="text-xs text-gray-400 font-medium">Price</span>
-          <span className="text-[#004d00] dark:text-emerald-400 font-extrabold text-lg">৳{price}</span>
+          <span className="text-[#004d00] dark:text-emerald-400 font-extrabold text-lg">Tk {price}</span>
         </div>
 
         <Link href={`/allAnimals/${cows.id}`} className="block w-full pt-1">

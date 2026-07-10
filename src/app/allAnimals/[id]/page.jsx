@@ -78,7 +78,7 @@ const AnimalsDetails = ({params}) => {
                 {animal.name}
               </h2>
               <p className="text-2xl font-black text-[#004d00] dark:text-emerald-400">
-                ৳{animal.price}
+                Tk {animal.price}
               </p>
             </div>
 
