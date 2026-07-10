@@ -3,20 +3,27 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const NavLink = ({href,children}) => {
-  const pathName =usePathname()
-  const isActive =pathName===href
+  const pathName = usePathname()
+  const isActive = pathName === href
   return (
     <Link 
       href={href} 
-      className={`px-3 py-1.5 rounded-lg font-medium text-xs md:text-sm transition-all duration-300 ${
-        isActive 
-          ? 'bg-[#004d00] text-white shadow-xs' 
-          : 'text-gray-700 hover:bg-[#004d00]/10 hover:text-[#004d00]'
-      }`}
+      className="relative px-3 py-1.5 rounded-lg font-medium text-xs md:text-sm transition-colors duration-300 inline-block"
     >
-      {children}
+      {isActive && (
+        <motion.span
+          layoutId="activeNavIndicator"
+          className="absolute inset-0 bg-[#004d00] rounded-lg"
+          style={{ zIndex: -1 }}
+          transition={{ type: "spring", stiffness: 380, damping: 30 }}
+        />
+      )}
+      <span className={isActive ? 'text-white' : 'text-gray-700 hover:text-[#004d00]'}>
+        {children}
+      </span>
     </Link>
   )
 };
