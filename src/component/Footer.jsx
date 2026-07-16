@@ -1,8 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const Footer = () => {
   return (
+    <ScrollReveal yOffset={30} duration={0.6}>
     <footer className="relative border-t border-gray-100 dark:border-zinc-800/80">
       
       {/* Background Layer */}
@@ -122,6 +124,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </ScrollReveal>
   );
 };
 

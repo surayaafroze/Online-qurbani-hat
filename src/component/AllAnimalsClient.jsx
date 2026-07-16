@@ -51,7 +51,8 @@ const AllAnimalsClient = ({ animals }) => {
       <motion.div 
         variants={containerVariants}
         initial="hidden"
-        animate="show"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
         className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 max-w-7xl mx-auto pb-12"
       >
         {sortedAnimals.map((item) => (
