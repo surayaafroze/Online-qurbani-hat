@@ -34,8 +34,8 @@ import { motion } from "framer-motion";
 ];
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] } }
 };
 
 const staggerContainer = {
@@ -43,7 +43,8 @@ const staggerContainer = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.12,
+      ease: "easeOut"
     }
   }
 };
@@ -61,7 +62,7 @@ const ExtraSection = () => {
           variants={staggerContainer}
           className="space-y-8"
         >
-          <motion.div variants={fadeInUp} className="text-center max-w-2xl mx-auto space-y-3">
+          <motion.div variants={fadeInUp} style={{ willChange: "transform, opacity" }} className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               Essential Qurbani Tips
             </h2>
@@ -105,7 +106,7 @@ const ExtraSection = () => {
           variants={staggerContainer}
           className="space-y-8 marquee-container overflow-hidden py-4"
         >
-          <motion.div variants={fadeInUp} className="text-center max-w-2xl mx-auto space-y-3">
+          <motion.div variants={fadeInUp} style={{ willChange: "transform, opacity" }} className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               Top Breeds for Qurbani
             </h2>
@@ -144,7 +145,7 @@ const ExtraSection = () => {
           variants={staggerContainer}
           className="space-y-8"
         >
-          <motion.div variants={fadeInUp} className="text-center max-w-2xl mx-auto space-y-3">
+          <motion.div variants={fadeInUp} style={{ willChange: "transform, opacity" }} className="text-center max-w-2xl mx-auto space-y-3">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight">
               Why Choose QurbaniHat
             </h2>
@@ -165,6 +166,7 @@ const ExtraSection = () => {
               <motion.div
                 key={idx}
                 variants={fadeInUp}
+                style={{ willChange: "transform, opacity" }}
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="p-6 bg-white border border-gray-100 rounded-2xl shadow-xs transition-all duration-300 hover:shadow-md hover:border-green-200"
               >
