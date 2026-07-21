@@ -4,6 +4,7 @@ import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 import { ToastContainer } from "react-toastify";
 
+import SmoothScrolling from "@/component/SmoothScrolling";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,11 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="">
-
-         <Navbar></Navbar>
-        {children}
-        <Footer></Footer>
+         <SmoothScrolling>
+           <Navbar></Navbar>
+           {children}
+           <Footer></Footer>
+         </SmoothScrolling>
      <ToastContainer />
         </body>
     </html>
