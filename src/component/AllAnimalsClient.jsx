@@ -10,7 +10,8 @@ const containerVariants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08
+      staggerChildren: 0.08,
+      ease: "easeOut"
     }
   }
 };
@@ -52,11 +53,11 @@ const AllAnimalsClient = ({ animals }) => {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: true, margin: "-50px" }}
         className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 max-w-7xl mx-auto pb-12"
       >
         {sortedAnimals.map((item) => (
-          <motion.div key={item.id} variants={itemVariants}>
+          <motion.div key={item.id} variants={itemVariants} style={{ willChange: "transform, opacity" }}>
             <AnimalsCard cows={item} />
           </motion.div>
         ))}
