@@ -15,11 +15,12 @@ const Banner = () => {
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: "easeOut" }}
+          transition={{ duration: 8, ease: [0.25, 0.1, 0.25, 1] }}
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1730428331315-71ab1e5af8fa?q=80&w=735&auto=format&fit=crop')",
+            willChange: "transform"
           }}
         />
 
@@ -31,7 +32,8 @@ const Banner = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="md:text-5xl text-3xl font-extrabold text-white leading-tight tracking-tight drop-shadow-xs"
           >
             We Provide Healthy &amp; Well-Raised <span className="text-[#ccffcc] font-black">Qurbani Animals</span>
@@ -40,7 +42,8 @@ const Banner = () => {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="text-base md:text-lg text-gray-200 max-w-2xl mx-auto font-light drop-shadow-xs"
           >
             From small goats to large cows, choose the best animal with complete confidence and trust. Safe, pure, and carefully selected for sacrifice.
@@ -49,7 +52,8 @@ const Banner = () => {
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ willChange: "transform, opacity" }}
             className="flex justify-center items-center"
           >
             <Link 
