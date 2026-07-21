@@ -11,8 +11,10 @@ const AboutClient = () => {
         {/* LEFT SIDE - TEXT WITH MOTION */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          style={{ willChange: "transform, opacity" }}
           className="space-y-6"
         >
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight tracking-tight">
@@ -31,13 +33,15 @@ const AboutClient = () => {
         {/* RIGHT SIDE - FEATURES WITH STAGGERED MOTION */}
         <motion.div 
           initial="hidden"
-          animate="show"
+          whileInView="show"
+          viewport={{ once: true, margin: "-50px" }}
           variants={{
             hidden: { opacity: 0 },
             show: {
               opacity: 1,
               transition: {
-                staggerChildren: 0.12
+                staggerChildren: 0.12,
+                ease: "easeOut"
               }
             }
           }}
@@ -53,10 +57,11 @@ const AboutClient = () => {
               key={idx}
               variants={{
                 hidden: { opacity: 0, y: 20 },
-                show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
+                show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 20 } }
               }}
+              style={{ willChange: "transform, opacity" }}
               whileHover={{ scale: 1.03, y: -2 }}
-              className="bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 p-6 rounded-2xl shadow-xs transition-all duration-300 hover:shadow-md hover:border-green-200"
+              className="bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 p-6 rounded-2xl shadow-sm transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:shadow-xl hover:border-green-200"
             >
               <h3 className="font-bold text-lg text-gray-900 dark:text-gray-100 mb-2 flex items-center gap-2">
                 <span>{feat.icon}</span> {feat.title}
