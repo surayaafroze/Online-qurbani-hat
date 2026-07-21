@@ -9,14 +9,15 @@ const containerVariants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.1,
+      ease: "easeOut"
     }
   }
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100, damping: 15 } }
+  hidden: { opacity: 0, y: 40 },
+  show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80, damping: 20 } }
 };
 
 const HomeAnimalsClient = ({ topAnimals }) => {
@@ -26,8 +27,9 @@ const HomeAnimalsClient = ({ topAnimals }) => {
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          style={{ willChange: "transform, opacity" }}
           className="text-3xl font-extrabold text-[#004d00] mb-8"
         >
           Featured Qurbani Livestock
@@ -37,11 +39,11 @@ const HomeAnimalsClient = ({ topAnimals }) => {
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-50px" }}
           className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6"
         >
           {topAnimals.map(cows => (
-            <motion.div key={cows.id} variants={itemVariants}>
+            <motion.div key={cows.id} variants={itemVariants} style={{ willChange: "transform, opacity" }}>
               <AnimalsCard cows={cows} />
             </motion.div>
           ))}
