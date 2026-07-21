@@ -68,11 +68,12 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden flex flex-col gap-4 px-4 pb-4 text-sm"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            style={{ willChange: "transform, opacity" }}
+            className="md:hidden absolute top-full left-0 w-full bg-[#ccffcc]/95 backdrop-blur-md shadow-lg border-t border-[#004d00]/10 flex flex-col gap-4 p-4 text-sm"
           >
             <NavLink href="/">Home</NavLink>
             <NavLink href="/allAnimals">All Animals</NavLink>
