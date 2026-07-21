@@ -8,7 +8,7 @@ const AnimalsCard = ({ cows }) => {
   const { name, type, breed, price, weight, age, location, description, image } = cows;
 
   return (
-    <div className="group bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 text-black dark:text-white rounded-2xl overflow-hidden shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+    <div className="group bg-white dark:bg-zinc-900 border border-gray-100 dark:border-zinc-800 text-black dark:text-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)] will-change-transform">
 
       {/* Image */}
       <div className="relative w-full h-52 overflow-hidden bg-gray-50 dark:bg-zinc-950">
@@ -20,7 +20,7 @@ const AnimalsCard = ({ cows }) => {
           src={image}
           alt={name}
           fill
-          className="object-cover transition-transform duration-750 ease-out group-hover:scale-106"
+          className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] group-hover:scale-105 will-change-transform"
         />
       </div>
 
