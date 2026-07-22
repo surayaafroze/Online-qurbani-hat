@@ -9,6 +9,7 @@ const client = new MongoClient(process.env.MONGO_URI);
 const db = client.db('qubaniHat');
 
 export const auth = betterAuth({
+  trustedOrigins: ['http://localhost:3000', process.env.BETTER_AUTH_URL].filter(Boolean),
   database: mongodbAdapter(db, {client}),
   emailAndPassword: { 
     enabled: true, 
