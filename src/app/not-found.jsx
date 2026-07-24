@@ -12,7 +12,7 @@ const NotFound = () => {
       </h2>
       
       <p className="text-gray-600 mt-2 max-w-md">
-        Sorry, the page you are looking for does not exist or has been moved.
+        Sorry,the page you are looking for does not exist or has been moved.
       </p>
 
       <Link href="/">
